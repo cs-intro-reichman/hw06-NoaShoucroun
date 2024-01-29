@@ -89,13 +89,13 @@ public class Runigram {
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		//// Replace the following statement with your code
-		Color[][] horizonal = new Color[image.length][image[0].length];
+		Color[][] horizontal = new Color[image.length][image[0].length];
 		for (int i = 0; i < image.length; i++) {
 			for (int j = 0; j < image[0].length; j++) {
-				horizonal[i][j] = image[i][(image[0].length - 1) - j];
+				horizontal[i][j] = image[i][(image[0].length - 1) - j];
 			}
 		}
-		return horizonal;
+		return horizontal;
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class Runigram {
 		double red = 0.299 * pixel.getRed();
 		double green = 0.587 * pixel.getGreen();
 		double blue = 0.114 * pixel.getBlue();
-		int lum = (int) (red + green + blue);
-		Color grey = new Color(lum, lum, lum);
+		int luminance = (int) (red + green + blue);
+		Color grey = new Color(luminance, luminance, luminance);
 		return grey;
 	}
 
